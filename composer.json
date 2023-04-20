@@ -1,0 +1,11 @@
+{
+    "name": "kmate/crypto-api",
+    "autoload": {
+        "psr-4": {
+            "Kmate\\CryptoApi\\": "app/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.5"
+    }
+}
