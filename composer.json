@@ -2,7 +2,7 @@
     "name": "kmate/crypto-api",
     "autoload": {
         "psr-4": {
-            "Kmate\\CryptoApi\\": "app/"
+            "App\\": "app/"
         }
     },
     "require": {
