@@ -28,7 +28,6 @@ class CryptoView
     foreach ($cryptoArray as $crypto) {
       $this->printCryptoInfo($crypto);
     }
-    echo "==========================================\n";
   }
 
   public function inquire(): string
