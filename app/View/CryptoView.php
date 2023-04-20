@@ -43,18 +43,11 @@ class CryptoView
 
   public function printCryptoInfo(Crypto $crypto): void
   {
-    if($crypto->getPrice() < 1){
-      $price = number_format($crypto->getPrice(), 5);
-    } else {
-      $price = number_format($crypto->getPrice(), 2);
-    }
-    $volume = number_format($crypto->getVolume());
-    $change = number_format($crypto->getChange(), 2);
     echo "==========================================\n";
     echo "Name: {$crypto->getName()}\n";
     echo "Symbol: {$crypto->getSymbol()}\n";
-    echo "Price: $$price\n";
-    echo "Volume in 24h: $volume\n";
-    echo "Percent change in 24h: $change%\n";
+    echo "Price: \${$crypto->getPrice()}\n";
+    echo "Volume in 24h: {$crypto->getVolume()}\n";
+    echo "Percent change in 24h: {$crypto->getChange()}%\n";
   }
 }

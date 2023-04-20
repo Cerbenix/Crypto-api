@@ -30,14 +30,18 @@ class Crypto
     return $this->name;
   }
 
-  public function getChange(): float
+  public function getChange(): string
   {
-    return $this->change;
+    return number_format($this->change, 2);
   }
 
-  public function getPrice(): float
+  public function getPrice(): string
   {
-    return $this->price;
+    if($this->price < 1){
+      return number_format($this->price, 5);
+    } else {
+      return number_format($this->price, 2);
+    }
   }
 
   public function getSymbol(): string
@@ -45,8 +49,8 @@ class Crypto
     return $this->symbol;
   }
 
-  public function getVolume(): float
+  public function getVolume(): string
   {
-    return $this->volume;
+   return number_format($this->volume);
   }
 }
