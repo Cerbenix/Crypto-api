@@ -41,9 +41,8 @@ class CryptoView
     echo "!!!!!!!!!!!!!!Invalid input!!!!!!!!!!!!!!!\n";
   }
 
-  public function printCryptoInfo(object $crypto): void
+  public function printCryptoInfo(Crypto $crypto): void
   {
-    /** @var Crypto $crypto */
     if($crypto->getPrice() < 1){
       $price = number_format($crypto->getPrice(), 5);
     } else {
