@@ -25,9 +25,9 @@ class CryptoApiClient
   {
     $response = $this->apiClient->get('v1/cryptocurrency/listings/latest?limit=10');
     $report = json_decode($response->getBody()->getContents());
-    $cryptoArray = [];
+    $cryptoCollection = [];
     foreach ($report->data as $record) {
-      $cryptoArray[] = new Crypto(
+      $cryptoCollection[] = new Crypto(
         $record->name,
         $record->symbol,
         $record->quote->USD->price,
@@ -35,7 +35,7 @@ class CryptoApiClient
         $record->quote->USD->percent_change_24h
       );
     }
-    return $cryptoArray;
+    return $cryptoCollection;
   }
 
   public function fetchBySymbol(string $symbol): ?Crypto
