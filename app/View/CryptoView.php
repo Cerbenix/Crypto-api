@@ -23,7 +23,7 @@ class CryptoView
     echo 'Bye Bye';
   }
 
-  public function printArray(array $cryptoArray): void
+  public function printAll(array $cryptoArray): void
   {
     foreach ($cryptoArray as $crypto) {
       $this->printCryptoInfo($crypto);

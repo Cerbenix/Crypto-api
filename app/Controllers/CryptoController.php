@@ -40,7 +40,7 @@ class CryptoController
   private function handleTop10(): void
   {
     $cryptoArray = $this->cryptoApiClient->fetchTop10();
-    $this->cryptoApiView->printArray($cryptoArray);
+    $this->cryptoApiView->printAll($cryptoArray);
   }
 
   private function handleBySymbol(string $symbol): void
